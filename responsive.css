@@ -1,9 +1,15 @@
+:root {
+  --dark-color: #021845;
+  --light-color: #8eacf9;
+  --background-color: #e7eeff;
+}
+
 /* Mobile Devices */
 
 @media (max-width: 391px) {
 
   #navbar li {
-    color: #00a54f;
+    color: var(--dark-color);
   }
 
   .theLogo h1 {
@@ -125,43 +131,100 @@ ul.gallery li {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    position: fixed;
-    top: 0;
-    right: -200%;
-    height: 100vh;
-    width: 50%;
-    background-color: #e9fcdd;
+    width: 100%;
+    top: -100rem;  
+    left: 0; 
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-    padding: 80px 0 0 10px;
-    transition: 0.3s;
+    padding: 3rem 0;
+    transition: all ease-in-out 0.5s;
+    position: fixed;
+    height: fit-content;
   }
 
-  #header .bring-it {
+  #navbar.bring-it {
     width: 100%;
-    right: 0;
-    transition: ease-in-out 0.5s;
+    top: 0;
+    transition: all ease-in-out 0.5s;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     background-color: rgb(142, 172, 249, 80%);
+    position: absolute !important;
   }
 
   #navbar.active {
     right: 0;
   }
+
   #navbar li {
     margin-bottom: 25px;
-    color: #00a54f;
   }
+
+  
+#navbar li.homeIcon a {
+background-color: var(--dark-color);
+}
+
+
+#navbar li.homeIcon a:hover {
+  background-color: var(--light-color);
+  }
+
   #menu_btn {
     display: flex;
     align-items: center;
   }
 
+  
+.serviceDropDown ul {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.serviceDropDownDsiplay ul {
+  -prefix-animation: slide 1s ease 0.5s forwards;
+  animation: slide ease-in-out 0.5s forwards;
+  transition: all 0.5s ease-in-out;
+  position:relative;
+}
+
+@keyframes slide {
+  from {max-height: 0;}
+  to {max-height: 100%;}
+}
+
+.serviceDropDownDesktop {
+  display: none !important;
+}
+  .serviceDropDown li {
+    background-color: var(--light-color);
+    margin:  0 0 0 1rem !important;
+    padding: 1rem !important;
+    color: var(--dark-color);
+    transition: all ease-in-out 0.1s;
+    outline: solid 0.1rem rgb(2, 24, 69, 10%);
+    outline-offset: -0.1rem;
+  }
+
+  .serviceDropDown li:hover {
+    outline: solid 0.1rem var(--dark-color);
+    outline-offset: -0.1rem;
+    cursor: pointer;
+    background-color: khaki;
+  }
+  
+.serviceDropDownDsiplay ul {
+  margin-bottom: 0 !important;
+}
+
+.serviceDropDownDsiplay {
+  margin-bottom: 0 !important;
+}
+
   #menu_btn img {
     margin-right: 1vw;
     padding: 5px;
     border-radius: 5px;
-    transition: ease-in-out 01s;
+    transition: ease-in-out 0.1s;
     background-color: #312d68;
   }
 
@@ -230,8 +293,8 @@ ul.gallery li {
   display: flex;
   position: absolute;
   top: 1vw;
-  right: -5vw;
-  z-index: -1;
+  right: 0;
+  z-index: 1;
 }
 
 .contact-container,
@@ -266,5 +329,8 @@ padding: 60px;
 
 /* Desktop Devices */
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
+  .serviceDropDownMobile {
+    display: none !important;
+  }
 }
