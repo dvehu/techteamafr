@@ -80,11 +80,12 @@ button#menu_btn, button#close
 
 .closeMenu .cancelIcon {
   display: block !important;
+  background-color: #b31421 !important;
 }
 
 .closeMenu .cancelIcon:hover {
   display: block !important;
-  background-color: #b31421 !important;
+  background-color: #d51f2e !important;
 }
 
 .logo {
@@ -246,9 +247,7 @@ li.serviceDropDown:hover .serviceDropDownDesktop {
   border-top: 0.2rem solid khaki;
   top: 1.5rem;
   transform: translateX(-13rem);
-  width: 80vw;
   background-color: var(--light-color);
-  background-image: url('images/wavez.png');
 }
 
 .shopPage .serviceDropDownDesktop,
@@ -263,6 +262,8 @@ li.serviceDropDown:hover .serviceDropDownDesktop {
   transition: all ease-in-out 0.1s;
   outline-offset: -0.1rem;
   white-space: nowrap;
+  outline: solid 0.1rem rgb(2, 24, 69, 10%);
+  outline-offset: -0.1rem;
 }
 
 .serviceDropDown li:hover {
@@ -344,12 +345,12 @@ li.serviceDropDown:hover .serviceDropDownDesktop {
   position: absolute;
   top: 0;
 }
-
+/* 
 .banner-1-remove,
 .banner-2 {
  transform: translateX(-150%) !important;
  margin-bottom: 0.1vw !important;
-}
+} */
 
 .banner-2-appear {
   transform: translateX(0) !important;
@@ -1258,6 +1259,10 @@ color:var(--dark-color);
 transform: translateY(-20px);
 }
 
+.contactInfo a {
+  white-space: unset;
+}
+
 /*
 
 About
@@ -1607,7 +1612,7 @@ margin-bottom: 20px;
   flex-wrap: wrap;
   justify-content: space-around;
   justify-items:center;
-  padding: 15vw 0;
+  padding: 1rem 0;
 }
 
 
